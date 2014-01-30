@@ -1,0 +1,7 @@
+*.class
+*.iml
+.gradle
+*.ipr
+*.ips
+*.txt
+*.iws
