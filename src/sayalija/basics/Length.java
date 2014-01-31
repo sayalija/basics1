@@ -1,8 +1,8 @@
 package sayalija.basics;
 
 public class Length {
-    double value;
-    Unit unit;
+    private double value;
+    private Unit unit;
 
     Length(double value,Unit unit){
         if(value < 0)
@@ -19,14 +19,24 @@ public class Length {
         return this.unit;
     }
 
-    public double comparator(Length l1, Length l2){
-        if(l1.getUnit() == l2.getUnit()){
-            double value1 = l1.getValue();
-            double value2 = l2.getValue();
-            if(value1 == value2) return 0;
-            else if (value1 )
-
-        }
-
+    public Length convertTo(Unit other){
+        double value =(this.getUnit().getUnitValue() / other.getUnitValue())
+                * this.value;
+        return new Length(value,other);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Length)) return false;
+
+        Length length = (Length) o;
+
+        Length otherUnit = length.convertTo(Unit.METER);
+        Length thisUnit = this.convertTo(Unit.METER);
+
+
+        return Double.compare(Math.round(thisUnit.getValue()*100.0)/100.0,Math.round(otherUnit.getValue()*100.0)/100.0) == 0;
+    }
+
 }

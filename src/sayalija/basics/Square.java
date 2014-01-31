@@ -1,15 +1,15 @@
 package sayalija.basics;
 
 public class Square{
-    Shapes shapes;
+    Shape shape;
     public Square(double side){
-        shapes = Shapes.createRectangle(side, side);
+        shape = Shape.createRectangle(side, side);
     }
     public double getArea(){
-        return shapes.getArea();
+        return shape.getArea();
     }
     public double getPerimeter(){
-        return shapes.getPerimeter();
+        return shape.getPerimeter();
     }
 
 }
