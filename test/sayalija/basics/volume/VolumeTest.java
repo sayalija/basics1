@@ -28,4 +28,11 @@ public class VolumeTest {
         assertEquals(volume, actual);
     }
 
+    @Test
+    public void ThreeThousdsdfsandMilliLiterShouldPoint003EqualToKiloLiter() {
+        Volume volume = new Volume(3000, Unit.MILLI_LITER);
+        Volume actual = volume.convertTo(Unit.GALLON);
+        assertEquals(volume, actual);
+    }
+
 }
