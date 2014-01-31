@@ -1,4 +1,4 @@
-package sayalija.basics;
+package sayalija.basics.length;
 
 public enum Unit {
     METER(1), CENTIMETER(0.01), MILLIMETER(0.001), KILOMETER(1000),

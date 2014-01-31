@@ -1,4 +1,4 @@
-package sayalija.basics;
+package sayalija.basics.length;
 
 public class Length {
     private double value;
@@ -34,7 +34,6 @@ public class Length {
 
         Length otherUnit = length.convertTo(Unit.METER);
         Length thisUnit = this.convertTo(Unit.METER);
-
 
         return Double.compare(Math.round(thisUnit.getValue()*100.0)/100.0,Math.round(otherUnit.getValue()*100.0)/100.0) == 0;
     }

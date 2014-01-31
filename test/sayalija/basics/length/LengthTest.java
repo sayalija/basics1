@@ -1,4 +1,4 @@
-package sayalija.basics;
+package sayalija.basics.length;
 
 import junit.framework.Assert;
 import org.junit.Test;
