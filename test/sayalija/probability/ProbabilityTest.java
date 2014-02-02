@@ -1,7 +1,8 @@
-package sayalija.basics;
+package sayalija.probability;
 
 import junit.framework.Assert;
 import org.junit.Test;
+import sayalija.probability.Probability;
 
 public class ProbabilityTest {
 

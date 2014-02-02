@@ -1,4 +1,4 @@
-package sayalija.basics.Measurement;
+package sayalija.measurement;
 
 public interface Unit {
     double getRatio();

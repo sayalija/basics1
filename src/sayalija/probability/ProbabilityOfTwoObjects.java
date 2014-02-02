@@ -1,4 +1,4 @@
-package sayalija.basics;
+package sayalija.probability;
 
 public class ProbabilityOfTwoObjects {
     double probability;

@@ -1,6 +1,6 @@
-package sayalija.basics.Measurement.length;
+package sayalija.measurement.length;
 
-import sayalija.basics.Measurement.Unit;
+import sayalija.measurement.Unit;
 
 public enum LengthUnit implements Unit{
     METER(1), CENTIMETER(0.01), MILLIMETER(0.001), KILOMETER(1000),

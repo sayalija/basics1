@@ -1,4 +1,4 @@
-package sayalija.basics.Measurement;
+package sayalija.measurement;
 
 public class Measurement {
     protected double value;
@@ -27,16 +27,12 @@ public class Measurement {
         if (this == o) return true;
         if (!(o instanceof Measurement)) return false;
 
-        Measurement length = (Measurement) o;
+        Measurement measurement = (Measurement) o;
 
-        Measurement otherUnit = length.convertTo(this.getDefault());
-        Measurement thisUnit = this.convertTo(this.getDefault());
+        Measurement otherUnit = measurement.convertTo(this.getUnit());
+        Measurement thisUnit = this.convertTo(this.getUnit());
 
         return Double.compare(Math.round(thisUnit.getValue()*100.0)/100.0,
                 Math.round(otherUnit.getValue()*100.0)/100.0) == 0;
-    }
-
-    Unit getDefault(){
-        return this.getUnit();
     }
 }
